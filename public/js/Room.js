@@ -4445,19 +4445,32 @@ function setTheme() {
     const theme = selectTheme.value;
     switch (theme) {
         case 'default':
-            swalBackground = 'linear-gradient(135deg, #000000, #434343)';
-            document.documentElement.style.setProperty('--body-bg', 'linear-gradient(135deg, #000000, #434343)');
-            document.documentElement.style.setProperty('--trx-bg', 'linear-gradient(135deg, #000000, #434343)');
-            document.documentElement.style.setProperty('--msger-bg', 'linear-gradient(135deg, #000000, #434343)');
-            document.documentElement.style.setProperty('--left-msg-bg', '#1a1a1a');
-            document.documentElement.style.setProperty('--right-msg-bg', '#2e2e2e');
-            document.documentElement.style.setProperty('--select-bg', '#333333');
+            // swalBackground = 'linear-gradient(135deg, #000000, #434343)';
+            // document.documentElement.style.setProperty('--body-bg', 'linear-gradient(135deg, #000000, #434343)');
+            // document.documentElement.style.setProperty('--trx-bg', 'linear-gradient(135deg, #000000, #434343)');
+            // document.documentElement.style.setProperty('--msger-bg', 'linear-gradient(135deg, #000000, #434343)');
+            // document.documentElement.style.setProperty('--left-msg-bg', '#1a1a1a');
+            // document.documentElement.style.setProperty('--right-msg-bg', '#2e2e2e');
+            // document.documentElement.style.setProperty('--select-bg', '#333333');
+            // document.documentElement.style.setProperty('--tab-btn-active', '#0D47A1');
+            // document.documentElement.style.setProperty('--settings-bg', 'linear-gradient(135deg, #000000, #434343)');
+            // document.documentElement.style.setProperty('--wb-bg', 'linear-gradient(135deg, #000000, #434343)');
+            // document.documentElement.style.setProperty('--btns-bg-color', 'rgba(0, 0, 0, 0.7)');
+            // document.documentElement.style.setProperty('--dd-color', '#FFFFFF');
+            // document.body.style.background = 'linear-gradient(135deg, #000000, #434343)';
+            swalBackground = 'radial-gradient(#ffffff, #ffffff)';
+            document.documentElement.style.setProperty('--body-bg', 'radial-gradient(#ffffff, #ffffff)');
+            document.documentElement.style.setProperty('--trx-bg', 'linear-gradient(135deg, #000000, #1a1a1a)');
+            document.documentElement.style.setProperty('--msger-bg', 'radial-gradient(#ffffff, #ffffff)');
+            document.documentElement.style.setProperty('--left-msg-bg', '#B3E5FC');
+            document.documentElement.style.setProperty('--right-msg-bg', '#B2FF59');
+            document.documentElement.style.setProperty('--select-bg', 'rgba(66, 165, 245, 0.3)');
             document.documentElement.style.setProperty('--tab-btn-active', '#0D47A1');
-            document.documentElement.style.setProperty('--settings-bg', 'linear-gradient(135deg, #000000, #434343)');
-            document.documentElement.style.setProperty('--wb-bg', 'linear-gradient(135deg, #000000, #434343)');
+            document.documentElement.style.setProperty('--settings-bg', 'radial-gradient(#ffffff, #ffffff)');
+            document.documentElement.style.setProperty('--wb-bg', 'radial-gradient(#393939, #000000)');
             document.documentElement.style.setProperty('--btns-bg-color', 'rgba(0, 0, 0, 0.7)');
             document.documentElement.style.setProperty('--dd-color', '#FFFFFF');
-            document.body.style.background = 'linear-gradient(135deg, #000000, #434343)';
+            document.body.style.background = 'linear-gradient(135deg, (#ffffff, #ffffff)';
             selectTheme.selectedIndex = 0;
             break;
         case 'dark':
