@@ -1260,53 +1260,54 @@ function checkMedia() {
 // ####################################################
 
 async function shareRoom(useNavigator = false) {
-    if (navigator.share && useNavigator) {
-        try {
-            await navigator.share({ url: RoomURL });
-            userLog('info', 'Room Shared successfully', 'top-end');
-        } catch (err) {
-            share();
-        }
-    } else {
-        share();
-    }
-    function share() {
-        sound('open');
+    // if (navigator.share && useNavigator) {
+    //     try {
+    //         await navigator.share({ url: RoomURL });
+    //         userLog('info', 'Room Shared successfully', 'top-end');
+    //     } catch (err) {
+    //         share();
+    //     }
+    // } else {
+    //     share();
+    // }
+    // function share() {
+    //     sound('open');
 
-        Swal.fire({
-            background: swalBackground,
-            position: 'center',
-            title: 'Share the room',
-            html: `
-            <div id="qrRoomContainer">
-                <canvas id="qrRoom"></canvas>
-            </div>
-            <br/>
-            <p style="background:transparent; color:rgb(8, 189, 89);">Join from your mobile device</p>
-            <p style="background:transparent; color:white; font-family: Arial, Helvetica, sans-serif;">No need for apps, simply capture the QR code with your mobile camera Or Invite someone else to join by sending them the following URL</p>
-            <p style="background:transparent; color:rgb(8, 189, 89);">${RoomURL}</p>`,
-            showDenyButton: true,
-            showCancelButton: true,
-            cancelButtonColor: 'red',
-            denyButtonColor: 'green',
-            confirmButtonText: `Copy URL`,
-            denyButtonText: `Email invite`,
-            cancelButtonText: `Close`,
-            showClass: { popup: 'animate__animated animate__fadeInDown' },
-            hideClass: { popup: 'animate__animated animate__fadeOutUp' },
-        }).then((result) => {
-            if (result.isConfirmed) {
-                copyRoomURL();
-            } else if (result.isDenied) {
-                shareRoomByEmail();
-            }
-            // share screen on join
-            if (isScreenAllowed) {
-                rc.shareScreen();
-            }
-        });
-        makeRoomQR();
-    }
+    //     Swal.fire({
+    //         background: swalBackground,
+    //         position: 'center',
+    //         title: 'Share the room',
+    //         html: `
+    //         <div id="qrRoomContainer">
+    //             <canvas id="qrRoom"></canvas>
+    //         </div>
+    //         <br/>
+    //         <p style="background:transparent; color:rgb(8, 189, 89);">Join from your mobile device</p>
+    //         <p style="background:transparent; color:white; font-family: Arial, Helvetica, sans-serif;">No need for apps, simply capture the QR code with your mobile camera Or Invite someone else to join by sending them the following URL</p>
+    //         <p style="background:transparent; color:rgb(8, 189, 89);">${RoomURL}</p>`,
+    //         showDenyButton: true,
+    //         showCancelButton: true,
+    //         cancelButtonColor: 'red',
+    //         denyButtonColor: 'green',
+    //         confirmButtonText: `Copy URL`,
+    //         denyButtonText: `Email invite`,
+    //         cancelButtonText: `Close`,
+    //         showClass: { popup: 'animate__animated animate__fadeInDown' },
+    //         hideClass: { popup: 'animate__animated animate__fadeOutUp' },
+    //     }).then((result) => {
+    //         if (result.isConfirmed) {
+    //             copyRoomURL();
+    //         } else if (result.isDenied) {
+    //             shareRoomByEmail();
+    //         }
+    //         // share screen on join
+    //         if (isScreenAllowed) {
+    //             rc.shareScreen();
+    //         }
+    //     });
+    //     makeRoomQR();
+    // }
+    console.log('Test')
 }
 
 // ####################################################
